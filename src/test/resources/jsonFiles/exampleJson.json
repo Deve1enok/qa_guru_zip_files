@@ -1,0 +1,12 @@
+{
+  "userName":"Лето",
+  "avatar":"https://avatarko.ru/img/KO",
+  "id":123,
+  "rating":7,
+  "skills": [
+    "love food",
+    "trainer",
+    "java",
+    "postman"
+  ]
+}
