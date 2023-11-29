@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
-public class JsonReaderTest extends JsonData {
+public class JsonReaderTest {
 
     private final ClassLoader cl = JsonReaderTest.class.getClassLoader();
     ObjectMapper objectMapper = new ObjectMapper();
@@ -19,7 +19,7 @@ public class JsonReaderTest extends JsonData {
         try (InputStream is = cl.getResourceAsStream("jsonFiles/exampleJson.json")) {
               assert is != null;
               try (InputStreamReader isr = new InputStreamReader(is)) {
-            JsonReaderTest data = objectMapper.readValue(isr, JsonReaderTest.class);
+            JsonData data = objectMapper.readValue(isr, JsonData.class);
             Assertions.assertEquals("Лето", data.userName);
             Assertions.assertEquals("https://avatarko.ru/img/KO", data.avatar);
             Assertions.assertEquals(123, data.id);
